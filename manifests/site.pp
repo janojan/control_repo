@@ -6,6 +6,6 @@ node default {
     }
     
    file {'/root/README':
-     owner =? 'root',
+     owner => 'root',
      }
 }
