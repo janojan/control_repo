@@ -1,11 +1,11 @@
 class profile::ssh_server {
   package {'openssh-server':
-    ensure => running,
-    enable => true,
+    ensure => 'present',
     }
   
   service {'sshd':
-    ensure => enabled,
+    ensure => 'running',
+    enable => 'true',
     }
     
   ssh_authorized_key { 'root@puppetmaster.vm':
