@@ -8,7 +8,7 @@ class profile::ssh_server {
     ensure => enabled,
     }
     
-  ssh_authorized_key {
+  ssh_authorized_key { 'root@puppetmaster.vm':
     ensure => present,
     user => root,
     type => 'ssh-rsa',
